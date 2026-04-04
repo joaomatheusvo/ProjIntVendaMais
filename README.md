@@ -11,7 +11,7 @@ A solução automatiza a coleta, processamento e análise de dados do ERP, dispo
 ## 👥 Integrantes
 
 - João Matheus — https://github.com/joaomatheusvo
-- Juliana Kruger - 
+- Juliana Kruger —
 
 ---
 
