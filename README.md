@@ -25,6 +25,7 @@ ERP → Azure Functions → Blob Storage → Azure SQL → Power BI
 
 ## 📂 Estrutura do Repositório
 
+```bash
 vendamais-arquitetura/
 │
 ├── docs/
@@ -37,3 +38,4 @@ vendamais-arquitetura/
 │       └── ADR-002.md
 │
 └── README.md
+```
