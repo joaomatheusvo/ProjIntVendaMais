@@ -39,3 +39,26 @@ vendamais-arquitetura/
 │
 └── README.md
 ```
+
+---
+
+## 📖 Como navegar
+
+- C4 Nível 1: visão geral do sistema
+- C4 Nível 2: detalhamento dos containers
+- ADRs: decisões arquiteturais documentadas
+
+---
+
+## ⚙️ Tecnologias
+
+- Azure Functions (Python)
+- Azure Blob Storage
+- Azure SQL Database
+- Power BI
+
+---
+
+## 🚫 Segurança
+
+Nenhuma credencial sensível é armazenada no repositório.
