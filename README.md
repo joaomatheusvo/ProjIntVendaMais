@@ -11,15 +11,30 @@ A solução automatiza a coleta, processamento e análise de dados do ERP, dispo
 ## 👥 Integrantes
 
 - João Matheus — https://github.com/joaomatheusvo
-- Juliana Kruger —
+- Juliana Kruger — https://github.com/Julianakruger
 
 ---
 
 ## 🏗️ Arquitetura
 
-A arquitetura segue o modelo de pipeline de dados:
+Ingestão → Armazenamento → Transformação → Consumo
 
-ERP → Azure Functions → Blob Storage → Azure SQL → Power BI
+A solução é composta pelos seguintes componentes:
+
+- Ingestão → Azure Functions 
+- Armazenamento bruto → Azure Blob Storage 
+- Transformação → Azure Functions 
+- Banco de dados → Azure SQL Database 
+- Consumo → Power BI 
+
+---
+
+##  Objetivos
+
+- Automatizar a extração de dados do ERP  
+- Centralizar o armazenamento em banco estruturado  
+- Garantir qualidade e consistência dos dados  
+- Disponibilizar informações para análise e tomada de decisão 
 
 ---
 
@@ -28,16 +43,16 @@ ERP → Azure Functions → Blob Storage → Azure SQL → Power BI
 ```bash
 vendamais-arquitetura/
 │
-├── docs/
-│   ├── c4/
-│   │   ├── 01-context.md
-│   │   └── 02-container.md
-│   │
-│   └── adr/
-│       ├── ADR-001.md
-│       └── ADR-002.md
-│
-└── README.md
+├── app
+│   └── app.py
+├── docs
+│   ├── adr
+│   │   ├── ADR-001.md
+│   │   └── ADR-002.md
+│   └── c4
+│       ├── 01-context.md
+│       └── 02-container.md
+├── README.md
 ```
 
 ---
@@ -56,9 +71,26 @@ vendamais-arquitetura/
 - Azure Blob Storage
 - Azure SQL Database
 - Power BI
+- Python
 
 ---
 
 ## 🚫 Segurança
 
 Nenhuma credencial sensível é armazenada no repositório.
+
+## Como executar
+
+```bash
+pip install -r requirements.txt
+python src/app.py
+```
+
+##  Processo de Desenvolvimento
+
+O projeto foi desenvolvido utilizando boas práticas de versionamento com Git:
+
+Commits com mensagens descritivas
+Sem Branches ou Pull Requests no momento por bug, mas foi tudo revisado
+
+A implementação da API utilizando Flask foi utilizada como uma simulação da camada de ingestão definida na arquitetura. No cenário real, conforme descrito nas ADRs, essa camada seria implementada utilizando Azure Functions no modelo serverless.
