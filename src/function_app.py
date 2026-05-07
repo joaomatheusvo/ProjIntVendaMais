@@ -10,7 +10,26 @@ from triggers.extract_cliente import app as extract_cliente
 from triggers.extract_pedido import app as extract_pedido
 from triggers.extract_entrega import app as extract_entrega
 
+from triggers.extract_entrega import app as extract_produto
+from triggers.extract_entrega import app as extract_regiao
+from triggers.extract_entrega import app as extract_representante
+from triggers.extract_entrega import app as transportadora
+from triggers.extract_entrega import app as categoria_produto
+from triggers.extract_entrega import app as extract_estoque_movimentacao
+from triggers.extract_entrega import app as extract_estoque_saldo
+from triggers.extract_entrega import app as extract_pedido_item
+from triggers.extract_entrega import app as extract_titulo_receber
+
 # Registrar as azure functions
 app.register_functions(extract_cliente)
 app.register_functions(extract_pedido)
 app.register_functions(extract_entrega)
+app.register_functions(extract_produto)
+app.register_functions(extract_regiao)
+app.register_functions(extract_representante)
+app.register_functions(transportadora)
+app.register_functions(categoria_produto)
+app.register_functions(extract_estoque_movimentacao)
+app.register_functions(extract_estoque_saldo)
+app.register_functions(extract_pedido_item)
+app.register_functions(extract_titulo_receber)
