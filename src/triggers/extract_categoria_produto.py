@@ -9,7 +9,7 @@ app = func.Blueprint()
 def extract_categoria_produto(timer: func.TimerRequest) -> None:
     
     sql_server = os.getenv("SQL_SERVER_SOURCE")
-    database = os.getenv("SQL_DATABASE_SOURCE E")
+    database = os.getenv("SQL_DATABASE_SOURCE")
     user = os.getenv("SQL_USER_SOURCE")
     password = os.getenv("SQL_PASSWORD_SOURCE")
     
