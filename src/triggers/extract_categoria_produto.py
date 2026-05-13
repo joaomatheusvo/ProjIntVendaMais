@@ -14,6 +14,4 @@ def extract_categoria_produto(timer: func.TimerRequest) -> None:
     password = os.getenv("SQL_PASSWORD_SOURCE")
     
     logging.info(f"servidor {sql_server}, banco: {database}, usuario: {user}, senha: {password} ...")
-
     
-        
