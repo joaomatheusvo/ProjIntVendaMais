@@ -12,7 +12,7 @@ def extract_pedido(timer: func.TimerRequest) -> None:
     sql_user = os.getenv("SQL_USER_SOURCE")
     sql_pass = os.getenv("SQL_PASSWORD_SOURCE")
 
-    logging.info(f"servidor: {sql_server},  banco: {database}, usuario:{sql_user}, senha: {sql_pass} ...")
+    logging.info(f"servidor: {sql_server},  banco: {sql_database}, usuario:{sql_user}, senha: {sql_pass} ...")
 
 
     # Configura a string de conexão para o banco de dados SQL Server
