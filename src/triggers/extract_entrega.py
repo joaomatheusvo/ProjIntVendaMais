@@ -35,7 +35,7 @@ def extract_entrega(timer: func.TimerRequest) -> None:
             # Cria um cursor para executar a consulta   
             cursor = conn.cursor()
             
-            query = "select * from erp.entrega"
+            query = "select top 5 * from erp.entrega"
 
             # Executa a consulta SQL
             cursor.execute(query)

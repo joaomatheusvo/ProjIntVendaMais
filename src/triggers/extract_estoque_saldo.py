@@ -35,7 +35,7 @@ def extract_estoque_saldo(timer: func.TimerRequest) -> None:
             # Cria um cursor para executar a consulta   
             cursor = conn.cursor()
             
-            query = "select * from erp.estoque_saldo"
+            query = "select top 5 * from erp.estoque_saldo"
 
             # Executa a consulta SQL
             cursor.execute(query)

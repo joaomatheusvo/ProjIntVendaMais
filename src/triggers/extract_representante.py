@@ -35,7 +35,7 @@ def extract_representante(timer: func.TimerRequest) -> None:
             # Cria um cursor para executar a consulta   
             cursor = conn.cursor()
             
-            query = "select * from erp.representante"
+            query = "select top 5 * from erp.representante"
 
             # Executa a consulta SQL
             cursor.execute(query)

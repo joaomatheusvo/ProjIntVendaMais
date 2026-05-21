@@ -35,7 +35,7 @@ def extract_titulo_receber(timer: func.TimerRequest) -> None:
             # Cria um cursor para executar a consulta   
             cursor = conn.cursor()
             
-            query = "select * from erp.titulo_receber"
+            query = "select top 5 * from erp.titulo_receber"
 
             # Executa a consulta SQL
             cursor.execute(query)

@@ -35,7 +35,7 @@ def extract_regiao(timer: func.TimerRequest) -> None:
             # Cria um cursor para executar a consulta   
             cursor = conn.cursor()
             
-            query = "select * from erp.regiao"
+            query = "select top 5 * from erp.regiao"
 
             # Executa a consulta SQL
             cursor.execute(query)
